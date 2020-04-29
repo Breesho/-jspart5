@@ -67,10 +67,13 @@ body {
   position: relative;
 }
 /* ------------------------------- FIN RECURENTES -- */
-.colorvalidate {
-  background-color: red;
-  color: white;
+.mdpt {
+  border: solid 2px green;
+}
+.mdpf {
+  border: solid 2px red;
+}
+.error {
+  color: red;
   padding: 10px;
-  border-radius: 5px;
-  border: none;
 }

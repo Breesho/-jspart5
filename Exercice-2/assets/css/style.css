@@ -74,3 +74,9 @@ body {
   border-radius: 5px;
   border: none;
 }
+.mdpt {
+  border: solid 2px green;
+}
+.mdpf {
+  border: solid 2px red;
+}

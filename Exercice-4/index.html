@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercice 4</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <h1>Exercice 4</h1>
+  <p>Créer un fichier html et y ajouter une image. Au clic sur l'image changer sa source, au survol, l'agrandir.</p>
+
+
+  <img src="assets/img/felix.png" alt="Felix Le Chat img" title="Felix le Chat" width="500" height="500" id="imgFélix">
+
+
+  <script>
+
+    let idFélix = document.getElementById('imgFélix');
+
+    idFélix.addEventListener('click', changeimg);
+    idFélix.addEventListener('mouseover', zoomimg);
+    idFélix.addEventListener('mouseout', zoomoutimg);
+    console.log(imgFélix.src);
+
+    function changeimg() {
+      if (idFélix.src.match('assets/img/felix.png')) {
+        idFélix.src = 'assets/img/prof.png';
+      }
+      else {
+        idFélix.src = 'assets/img/felix.png';
+      }
+    }
+    function zoomimg() {
+     idFélix.style.width= "40em";
+     idFélix.style.height= "40em";
+    }
+    function zoomoutimg() {
+     idFélix.style.width= "";
+     idFélix.style.height= "";
+    }
+
+  </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercice 6</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <h1>Exercice 6</h1>
+  <p>Dans un formulaire, faire que les champs aient une bordure noire quand ils ont le focus. La supprimer quand ils
+    perdent le focus.</p>
+
+
+  <form action="" class="col-8 m-auto" id="myForm">
+
+    <div class="form-group">
+      <label for="pass">Mot de passe</label>
+      <input type="password" class="form-control" id="pass" name="pass">
+      <label for="passconfirm">Confirmer le Mot de passe</label>
+      <input type="password" class="form-control" id="passconfirm" name="passconfirm">
+    </div>
+
+    <button type="button" class="colorvalidate">Enregistrer</button>
+
+  </form>
+
+
+
+  <script>
+
+ 
+    
+     let idpass = document.getElementById('pass');
+     let idpassconfirm = document.getElementById('passconfirm');
+     
+     idpass.addEventListener('focusin', focuspass);
+     idpass.addEventListener('focusout', focuspassword);
+     idpassconfirm.addEventListener('focusin', focuspassconfirm);
+     idpassconfirm.addEventListener('focusout', focuspassword);
+     
+    
+     
+
+    function focuspass() {
+      idpass.style.border = "2px solid black";
+
+    }
+    function focuspassconfirm() {
+      idpassconfirm.style.border = "2px solid black";
+
+    }
+    function focuspassword() {
+      idpass.style.border = "";
+      idpassconfirm.style.border = "";
+
+    }
+  </script>
+
+</body>
+
+</html>

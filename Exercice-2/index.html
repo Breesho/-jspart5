@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercice 1</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Exercice 2</title>
+    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-<h1>Exercice 1</h1>
-<p>Créer un formulaire demandant un mot de passe et une confirmation de mot de passe et comportant un bouton.
-    Au clic sur le bouton, si les deux champs sont identiques, les entourer de vert. Sinon les entourer en rouge.</p>
+<h1>Exercice 2</h1>
+<p>Refaire le premier exercice mais en utilisant des classes préparées en css.</p>
 
     
   
@@ -42,19 +42,21 @@
        let password = document.getElementById('pass')
        let passwordconfirm = document.getElementById('passconfirm')
 
-    if (password.value == passwordconfirm.value ){
+    if (password.value == passwordconfirm.value){
         console.log('mdp bon');
-        // document.getElementById('pass').style.borderColor = "green";
-        // document.getElementById('passconfirm').style.borderColor = "green";
-        password.style.borderColor = "green";
-        passwordconfirm.style.borderColor = "green";
-    } 
+        password.classList.add("mdpt");
+        passwordconfirm.classList.add("mdpt");
+        password.classList.remove("mdpt");
+        passwordconfirm.classList.remove("mdpt");
+        
+    }
     else {
         console.log('mdp erroné')
-        // document.getElementById('pass').style.borderColor = "red";
-        // document.getElementById('passconfirm').style.borderColor = "red ";
-        password.style.borderColor = "red";
-        passwordconfirm.style.borderColor = "red";
+     
+        password.classList.add("mdpf");
+        passwordconfirm.classList.add("mdpf");
+        password.classList.remove("mdpt");
+        passwordconfirm.classList.remove("mdpt");
     }
 
       }
